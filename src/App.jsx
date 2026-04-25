@@ -1,5 +1,10 @@
 import React from 'react';
 
+import heroScreenshot from './assets/phone.png';
+import barcodeImg from './assets/barcode-image.webp';
+import product1 from './assets/product-1.webp';
+import scorePreview from './assets/image.png';
+
 const AppleIcon = ({ className }) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" className={className}>
     <path d="M15.079 5.999l.239 .012c1.43 .097 3.434 1.013 4.508 2.586a1 1 0 0 1 -.344 1.44c-.05 .028 -.372 .158 -.497 .217a4.15 4.15 0 0 0 -.722 .431c-.614 .461 -.948 1.009 -.942 1.694c.01 .885 .339 1.454 .907 1.846c.208 .143 .436 .253 .666 .33c.126 .043 .426 .116 .444 .122a1 1 0 0 1 .662 .942c0 2.621 -3.04 6.381 -5.286 6.381c-.79 0 -1.272 -.091 -1.983 -.315l-.098 -.031c-.463 -.146 -.702 -.192 -1.133 -.192c-.52 0 -.863 .06 -1.518 .237l-.197 .053c-.575 .153 -.964 .226 -1.5 .248c-2.749 0 -5.285 -5.093 -5.285 -9.072c0 -3.87 1.786 -6.92 5.286 -6.92c.297 0 .598 .045 .909 .128c.403 .107 .774 .26 1.296 .508c.787 .374 .948 .44 1.009 .44h.016c.03 -.003 .128 -.047 1.056 -.457c1.061 -.467 1.864 -.685 2.746 -.616l-.24 -.012z" />
@@ -41,21 +46,7 @@ const CrossCircleIcon = ({ className }) => (
   </svg>
 );
 
-// ==========================================
-// MAIN PAGE COMPONENT
-// ==========================================
 export default function OliveLandingPage() {
-  const sliderImages = [
-    '/assets/images/how-to/slider/product-1.png',
-    '/assets/images/how-to/slider/product-2.png',
-    '/assets/images/how-to/slider/product-3.png',
-    '/assets/images/how-to/slider/product-4.png',
-    '/assets/images/how-to/slider/product-5.png',
-    '/assets/images/how-to/slider/product-6.png',
-    '/assets/images/how-to/slider/product-7.png',
-    '/assets/images/how-to/slider/product-8.png',
-  ];
-
   return (
     <div className="font-sans antialiased text-neutral-800 bg-[#fafdfb]">
       
@@ -114,7 +105,7 @@ export default function OliveLandingPage() {
             <div className="relative mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between px-4 py-4 lg:hidden rounded-2xl">
               <div className="flex w-full flex-row items-center justify-between">
                 <a aria-label="Return to homepage" className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black" href="/">
-                   <img src="/assets/images/olive-logo.svg" alt="Olive" className="h-8 w-auto" />
+                    <h1 className="text-xl font-bold">Olive</h1>
                 </a>
                 <div className="ml-4 cursor-pointer">
                   <MenuIcon className="text-black w-6 h-6 shrink-0" />
@@ -141,7 +132,6 @@ export default function OliveLandingPage() {
                 <span className="font-dm-sans text-sm text-neutral-500 font-medium sm:ml-2">Trusted by thousands of healthy families</span>
               </div>
 
-              {/* Typography */}
               <h1 className="py-2 md:pt-4 pb-4 mx-auto max-w-3xl text-[#1F3824] text-balance text-center font-[600] tracking-tight text-5xl md:text-7xl">
                 The Safest Way to<br className="hidden md:block" /> Shop for Groceries
               </h1>
@@ -149,7 +139,6 @@ export default function OliveLandingPage() {
                 Use the Olive Food Scanner App to Instantly Eliminate Harmful Ingredients from Your Family&apos;s Diet and Get Expert-Backed Food Insights
               </p>
 
-              {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-8">
                 <a target="_blank" rel="noreferrer" className="inline-flex items-center cursor-pointer justify-center gap-2 whitespace-nowrap rounded-full font-medium bg-[#1F3824] text-white shadow-md hover:bg-[#2D5234] px-8 py-3.5 text-base" href="https://apps.apple.com/us/app/olive-holistic-food-scanner/id6739765789">
                   <AppleIcon className="w-5 h-5" /> Download for iOS
@@ -162,7 +151,7 @@ export default function OliveLandingPage() {
 
             {/* Layered Phone Mockup */}
             <div className="relative z-40 min-h-[500px] max-w-6xl mx-auto overflow-hidden mt-16 flex justify-center items-center">
-              <img src="src/assets/Screenshot 2026-04-26 012803.png" alt="App Screenshot" className="" />
+              <img src={heroScreenshot} alt="App Screenshot" className="" />
             </div>
 
           </div>
@@ -183,7 +172,7 @@ export default function OliveLandingPage() {
                 <div className="absolute top-4 right-4 w-6 h-6 border-t-2 border-r-2 border-[#1F3824] opacity-30 rounded-tr-lg"></div>
                 <div className="absolute bottom-4 left-4 w-6 h-6 border-b-2 border-l-2 border-[#1F3824] opacity-30 rounded-bl-lg"></div>
                 <div className="absolute bottom-4 right-4 w-6 h-6 border-b-2 border-r-2 border-[#1F3824] opacity-30 rounded-br-lg"></div>
-                <img src="src/assets/barcode-image.webp" alt="Barcode scan" className="h-24 object-contain" />
+                <img src={barcodeImg} alt="Barcode scan" className="h-24 object-contain" />
               </div>
               <p className="text-sm text-neutral-600">When you open Olive simply scan the barcode to instantly detect product ingredients. Olive’s intuitive design means busy parents can quickly see which items contain harmful substances.</p>
             </div>
@@ -205,8 +194,8 @@ export default function OliveLandingPage() {
               <h3 className="font-semibold text-lg mb-4 text-gray-800">Actionable Insights</h3>
               <div className="h-[200px] bg-white rounded-xl flex items-center justify-center mb-4 overflow-hidden relative border border-gray-100">
                  <div className="flex gap-4 items-end">
-                    <img src="src/assets/product-1.webp" className="w-20 h-28 object-cover rounded-xl shadow-lg -rotate-6 transform" alt="Alternative 1" />
-                    <img src="src/assets/barcode-image.webp" className="w-20 h-28 object-cover rounded-xl shadow-lg rotate-6 transform" alt="Alternative 2" />
+                    <img src={product1} className="w-20 h-28 object-cover rounded-xl shadow-lg -rotate-6 transform" alt="Alternative 1" />
+                    <img src={barcodeImg} className="w-20 h-28 object-cover rounded-xl shadow-lg rotate-6 transform" alt="Alternative 2" />
                  </div>
               </div>
               <p className="text-sm text-neutral-600">Once analyzed, Olive provides tailored insights and healthier product suggestions, empowering you to make better choices for your family's health.</p>
@@ -218,7 +207,6 @@ export default function OliveLandingPage() {
 
       {/* 3. BENEFITS LAYOUT */}
       <section className="relative bg-[#F5FAF6] pb-24">
-        {/* Top Green Background */}
         <div className="pb-32 md:py-48 bg-[#386641] px-4 pt-16">
           <div className="flex flex-col md:flex-row justify-between max-w-5xl mx-auto gap-10">
             <h2 className="text-white text-3xl md:text-5xl font-bold max-w-lg">Health Benefits of Using Olive</h2>
@@ -231,7 +219,6 @@ export default function OliveLandingPage() {
           </div>
         </div>
 
-        {/* Floating Cards (Overlap the green background) */}
         <div className="-mt-24 flex flex-col px-4 md:px-8 gap-8 relative z-10">
           
           <div className="bg-white max-w-5xl mx-auto rounded-2xl grid grid-cols-1 lg:grid-cols-2 shadow-xl overflow-hidden border border-gray-100">
@@ -251,7 +238,7 @@ export default function OliveLandingPage() {
               </ul>
             </div>
             <div className="bg-gradient-to-b from-[#EFF6F0] to-[#9DC8A3] p-8 flex items-center justify-center min-h-[300px]">
-              <img src="src/assets/image.png" alt="Score preview" className="rounded-xl shadow-xl w-[70%] object-fit" />
+              <img src={scorePreview} alt="Score preview" className="rounded-xl shadow-xl w-[70%] object-fit" />
             </div>
           </div>
 
@@ -386,10 +373,7 @@ export default function OliveLandingPage() {
       {/* 7. FOOTER */}
       <footer className="max-w-7xl mx-auto px-4 md:px-8 mb-8 mt-12">
         <div className="bg-[#1F3824] text-white rounded-3xl p-8 md:p-16 shadow-2xl relative overflow-hidden">
-          {/* Decorative shapes could go here if needed */}
-          
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 relative z-10">
-            {/* Nav Columns */}
             <div className="md:col-span-3">
               <h3 className="font-bold text-xl mb-6">Explore More Olive Tools</h3>
               <ul className="space-y-4">
@@ -410,7 +394,6 @@ export default function OliveLandingPage() {
               </ul>
             </div>
 
-            {/* Newsletter & Main CTA */}
             <div className="md:col-span-6 flex flex-col md:items-end text-left md:text-right">
               <h2 className="font-bold text-3xl md:text-4xl mb-8 max-w-sm">Keep your family safe with Olive</h2>
               <p className="text-white/80 mb-6 max-w-sm">Get the latest lab testing data sent directly to your inbox.</p>
@@ -428,7 +411,6 @@ export default function OliveLandingPage() {
             </div>
           </div>
           
-          {/* Footer Bottom */}
           <div className="flex flex-col md:flex-row justify-between items-center mt-20 pt-8 border-t border-white/10 text-sm text-white/60 relative z-10">
             <div className="flex flex-wrap justify-center gap-6 mb-4 md:mb-0 font-medium">
               <a href="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</a>
